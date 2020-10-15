@@ -267,13 +267,13 @@ public abstract class BaseActivity<T extends BasePresenter> extends AppCompatAct
     }
 
     public void showLoading(final boolean cancelable) {
-        if (mLoading != null && !mLoading.isShowing()) {
+        if (mLoading != null) {
             runOnUiThread(() -> mLoading.show(cancelable));
         }
     }
 
     public void dismissLoading() {
-        if (mLoading != null && mLoading.isShowing()) {
+        if (mLoading != null) {
             runOnUiThread(() -> mLoading.dismiss());
         }
     }

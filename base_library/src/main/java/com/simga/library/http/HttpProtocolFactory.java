@@ -39,8 +39,8 @@ public class HttpProtocolFactory {
         }
 
         OkHttpClient.Builder okHttpClientBuilder = new OkHttpClient.Builder();
-        okHttpClientBuilder.connectTimeout(60, TimeUnit.SECONDS);
-        okHttpClientBuilder.readTimeout(60, TimeUnit.SECONDS);
+        okHttpClientBuilder.connectTimeout(30, TimeUnit.SECONDS);
+        okHttpClientBuilder.readTimeout(30, TimeUnit.SECONDS);
         okHttpClientBuilder.addInterceptor(new MyRequestInterceptor());
 
 //        try {
