@@ -1,0 +1,160 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android-extensions'
+//apply plugin: 'kotlin-android'
+//apply plugin: 'kotlin-kapt'
+apply plugin: 'realm-android'
+
+def keystorePropertiesFile = rootProject.file("keystore.properties");
+def keystoreProperties = new Properties()
+keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+
+def buildTime() {
+    def time = new Date()
+    return time.format("MM_dd_HH_mm")
+}
+
+android {
+    useLibrary 'org.apache.http.legacy'
+    dexOptions {
+        preDexLibraries = false    //让它不要对Lib做preDexing
+        javaMaxHeapSize "4g"     //增加java堆内存大小
+    }
+    //指定jdk版本
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
+    aaptOptions.cruncherEnabled = false
+    aaptOptions.useNewCruncher = false
+    defaultConfig {
+        applicationId "com.king.android"
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 20200921
+        versionName "0.0.1"
+        multiDexEnabled true
+        ndk { abiFilters 'armeabi', 'armeabi-v7a', 'armeabi-v8a', 'x86' }
+        manifestPlaceholders = [
+                //极光推送
+                JPUSH_PKGNAME     : applicationId,
+                JPUSH_APPKEY      : "JPUSH_APPKEY",
+                JPUSH_CHANNEL     : "JPUSH_CHANNEL",
+
+                //BUGLY
+                BUGLY_APPID       : "aaaa",
+                BUGLY_APP_VERSION : 1,
+                BUGLY_APP_CHANNEL : "king",
+                BUGLY_ENABLE_DEBUG: false
+        ]
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath = true
+            }
+        }
+    }
+    signingConfigs {
+        release {
+            storeFile file(keystoreProperties['storeFile'])
+            storePassword keystoreProperties['storePassword']
+            keyAlias keystoreProperties['keyAlias']
+            keyPassword keystoreProperties['keyPassword']
+        }
+    }
+    buildTypes {
+        release {
+            //proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            //改成true 混淆代码 apk瘦身
+            minifyEnabled false
+            //清除无用资源 需跟minifyEnabled同时开启 apk瘦身
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            // 不显示Log
+            //buildConfigField "boolean", "LOG_DEBUG", "false"
+            //签名
+            signingConfig signingConfigs.release
+
+            applicationVariants.all { variant ->
+                variant.outputs.all {
+                    outputFileName = "king${variant.flavorName}_v${variant.versionName}_${buildTime()}.apk"
+                }
+            }
+        }
+        debug {
+            shrinkResources false
+            minifyEnabled false
+//            signingConfig signingConfigs.release
+        }
+    }
+    lintOptions {
+        //即使有lint报错也不停止打包
+        checkReleaseBuilds false
+        abortOnError false
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.appcompat:appcompat:1.3.0-alpha02'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.3.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation project(':base_library')
+    implementation project(':picture_library')
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
+    //滚动选择器
+    api('com.github.gzu-liyujiang.AndroidPicker:WheelPicker:1.5.6') {
+        exclude group: 'com.android.support'
+    }
+    //图片轮播
+    api 'com.youth.banner:banner:1.4.10'
+    implementation files('libs/jsoup-1.8.1.jar')
+    api 'com.amap.api:location:4.9.0'
+
+    //BUG收集
+    implementation 'com.tencent.bugly:crashreport_upgrade:1.4.5'
+    implementation 'com.tencent.bugly:nativecrashreport:3.7.1'
+    implementation 'com.tencent.tinker:tinker-android-lib:1.9.14.6'
+    //推送
+    implementation files('libs/mi_push_v3.6.12.jar')
+    implementation files('libs/vivo_push_v2.3.1.jar')
+    implementation files('libs/oppo_push_v1.0.1.jar')
+
+    // https://github.com/H07000223/FlycoTabLayout 一个Android TabLayout库,目前有3个TabLayout
+    api 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+    // https://github.com/wasabeef/richeditor-android RichEditor for Android is a beautiful Rich Text WYSIWYG Editor for Android.
+    implementation 'jp.wasabeef:richeditor-android:1.2.2'
+    // https://github.com/maning0303/MNPasswordEditText Android验证码和密码输入框，能自定义输入框个数和样式（连体，下划线和方形框） 类似微信支付宝的密码输入框等
+    api 'com.github.maning0303:MNPasswordEditText:V1.0.2'
+    // https://github.com/vinc3m1/RoundedImageView A fast ImageView that supports rounded corners, ovals, and circles.
+    implementation 'com.makeramen:roundedimageview:2.2.1'
+    // https://github.com/JavaNoober/BackgroundLibrary 通过标签直接生成shape，无需再写shape.xml
+    implementation 'com.noober.background:core:1.6.0'
+    // https://github.com/gyf-dev/ImmersionBar android 4.4以上沉浸式实现
+    implementation 'com.gyf.immersionbar:immersionbar:3.0.0'
+    implementation 'com.gyf.immersionbar:immersionbar-components:3.0.0'
+    // https://github.com/princekin-f/EasyFloat Android悬浮窗框架
+    implementation 'com.github.princekin-f:EasyFloat:1.1.3'
+    // 侧滑菜单
+    implementation 'com.github.mcxtzhang:SwipeDelMenuLayout:V1.3.0'
+    implementation "androidx.core:core-ktx:1.3.1"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    //与kotlin-kapt不兼容尚无解决方案
+    implementation "org.projectlombok:lombok:1.16.18"
+    implementation 'org.glassfish:javax.annotation:10.0-b28'
+
+    //yy svga动画库
+    implementation 'com.github.yyued:SVGAPlayer-Android:2.4.7'
+
+    implementation 'com.github.joker-fu:BannerPager:0.1.0'
+}
+repositories {
+    mavenCentral()
+}

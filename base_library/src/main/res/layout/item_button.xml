@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.simga.library.widget.BGButton
+        android:id="@+id/button"
+        app:normalSolid="@color/white"
+        app:normalTextColor="@color/text_333333"
+        app:pressedSolid="@color/pressColor"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px90dp"
+        android:gravity="center"
+        android:text="@string/select_xiangce"
+        android:textSize="@dimen/px28dp" />
+</LinearLayout>

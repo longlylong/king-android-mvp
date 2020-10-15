@@ -1,0 +1,60 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- <item name="actionBarSize">42dp</item>-->
+        <item name="android:windowBackground">@color/bg_app</item>
+    </style>
+
+    <style name="NoActionbar" parent="Theme.AppCompat.Light.NoActionBar" />
+
+    <style name="ActionbarOverlay" parent="AppTheme">
+        <item name="windowActionBarOverlay">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="actionBarStyle">@style/Widget.ActionBar.Transparent</item>
+    </style>
+
+    <style name="ActionbarContentOverlay" parent="AppTheme">
+        <item name="windowActionBarOverlay">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="actionBarStyle">@style/Widget.ActionBar.Transparent</item>
+    </style>
+
+    <style name="Widget.ActionBar.blue" parent="Base.Widget.AppCompat.Light.ActionBar.Solid">
+        <item name="background">@color/blue_dark</item>
+    </style>
+
+    <style name="Widget.ActionBar.Transparent" parent="Base.Widget.AppCompat.Light.ActionBar.Solid">
+        <item name="background">@null</item>
+    </style>
+
+    <style name="Theme.AppCompat.Translucent" parent="@style/AppTheme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+    </style>
+
+    <style name="PopupAnimation" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/popup_enter</item>
+        <item name="android:windowExitAnimation">@anim/popup_exit</item>
+    </style>
+
+    <style name="Activity_Translate" parent="NoActionbar">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@style/PopupAnimation</item>
+        <!--        <item name="android:windowFullscreen">true</item>-->
+    </style>
+
+    <!-- 普通 dialog -->
+    <style name="CommonDialog" parent="android:Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+</resources>

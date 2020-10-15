@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+       android:shape="rectangle">
+
+    <!-- 设置边框的大小和颜色 -->
+    <stroke
+        android:width="@dimen/px1dp"
+        android:color="@color/white"/>
+
+    <solid android:color="@color/white"/>
+
+    <!-- 定义圆角弧度 -->
+    <corners
+        android:radius="@dimen/px6dp"/>
+
+</shape>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="49dp"
+    android:background="@color/wave_blue_very_deep"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/foot_a"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/foot_a_icon"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@mipmap/load_image_default" />
+
+        <TextView
+            android:id="@+id/foot_a_text"
+            style="@style/Text_Sans_Small_Disabled"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:gravity="center"
+            android:text="首页" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/foot_b"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/foot_b_icon"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@mipmap/load_image_default" />
+
+        <TextView
+            android:id="@+id/foot_b_text"
+            style="@style/Text_Sans_Small_Disabled"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:gravity="center"
+            android:text="BBB" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/foot_c"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/foot_c_icon"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@mipmap/load_image_default" />
+
+        <TextView
+            android:id="@+id/foot_c_text"
+            style="@style/Text_Sans_Small_Disabled"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:gravity="center"
+            android:text="行情" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <View
+            android:id="@+id/foot_my_red_point"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/circle_red"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/foot_d"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/foot_d_icon"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@mipmap/load_image_default" />
+
+            <TextView
+                android:id="@+id/foot_d_text"
+                style="@style/Text_Sans_Small_Disabled"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:gravity="center"
+                android:text="我" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>

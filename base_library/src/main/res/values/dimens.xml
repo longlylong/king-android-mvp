@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="title_bar_height">56dp</dimen>
+    <dimen name="popmenu_xoff">5dip</dimen>
+    <dimen name="popmenu_yoff">2dip</dimen>
+</resources>

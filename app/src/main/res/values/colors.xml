@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="foot_clicked">#aa111111</color>
+    <color name="foot_no_clicked">#4f4f4f</color>
+
+    <color name="wave_red">#f66262</color>
+    <color name="wave_green">#00b775</color>
+    <color name="wave_blue_very_deep">#272E36</color>
+    <color name="wave_blue_deep">#0D6EAD</color>
+    <color name="wave_blue_main">#3198DB</color>
+    <color name="wave_gray">#64000000</color>
+
+    <color name="bg_gray">#aaa</color>
+    <color name="bg_app">#fafafa</color>
+    <color name="bg_white">#fff</color>
+    <color name="bg_black">#000</color>
+    <color name="bg_pink">#f0f</color>
+
+    <drawable name="item_gray">#0E000000</drawable>
+
+    <color name="text_color_primary">#DF000000</color>
+    <color name="text_color_secondary">#8A000000</color>
+    <color name="text_color_disabled">#43000000</color>
+    <color name="text_color_primary_light">#DFFFFFFF</color>
+    <color name="text_color_secondary_light">#B3FFFFFF</color>
+    <color name="text_color_disabled_light">#DFFFFFFF</color>
+
+    <color name="blue_light">#40C4FF</color>
+    <color name="divide_line">#1F000000</color>
+    <color name="grid_divide_line">#0A000000</color>
+    <color name="divide_line_light">#1FFFFFFF</color>
+    <color name="blue_dark">#03A9F4</color>
+    <color name="indicator_black">#1A000000</color>
+    <color name="green_light">#B2FF59</color>
+    <color name="green_dark">#8BC34A</color>
+    <color name="menu_background">#303030</color>
+
+    <drawable name="blue_light">#40C4FF</drawable>
+    <drawable name="blue_dark">#03A9F4</drawable>
+    <drawable name="green_light">#B2FF59</drawable>
+    <drawable name="green_dark">#8BC34A</drawable>
+    <drawable name="black_dark">#DF000000</drawable>
+
+    <color name="bg_transparent_black">#80000000</color>
+    <color name="bg_logo">#f56971</color>
+</resources>

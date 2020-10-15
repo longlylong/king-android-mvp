@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="@dimen/px200dp"
+        android:layout_height="@dimen/px200dp"
+        android:layout_marginTop="@dimen/px130dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_phone"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/px80dp"
+        android:layout_marginLeft="@dimen/px76dp"
+        android:layout_marginTop="@dimen/px100dp"
+        android:layout_marginRight="@dimen/px76dp"
+        android:background="@color/transparent"
+        android:gravity="center"
+        android:hint="手机号码"
+        android:inputType="phone"
+        android:maxLength="11"
+        android:textColor="@color/text_333333"
+        android:textColorHint="@color/text_999999"
+        android:textCursorDrawable="@drawable/my_cursor"
+        android:textSize="@dimen/px30sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_logo" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/px1dp"
+        android:layout_marginLeft="@dimen/px76dp"
+        android:layout_marginRight="@dimen/px76dp"
+        android:background="@color/diver_dcdcdc"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_phone" />
+
+
+    <EditText
+        android:id="@+id/et_passowrd"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/px80dp"
+        android:layout_marginLeft="@dimen/px76dp"
+        android:layout_marginTop="@dimen/px40dp"
+        android:layout_marginRight="@dimen/px76dp"
+        android:background="@color/transparent"
+        android:gravity="center"
+        android:hint="密码"
+        android:inputType="textPassword"
+        android:textColor="@color/text_333333"
+        android:textColorHint="@color/text_999999"
+        android:textCursorDrawable="@drawable/my_cursor"
+        android:textSize="@dimen/px30sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view1" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/px1dp"
+        android:layout_marginLeft="@dimen/px76dp"
+        android:layout_marginRight="@dimen/px76dp"
+        android:background="@color/diver_dcdcdc"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_passowrd" />
+
+    <com.simga.library.widget.BGButton
+        android:id="@+id/btn_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px30dp"
+        android:text="立即注册"
+        android:textSize="@dimen/px30sp"
+        app:layout_constraintLeft_toLeftOf="@id/view2"
+        app:layout_constraintTop_toBottomOf="@id/view2"
+        app:normalTextColor="@color/main_color"
+        app:pressedTextColor="@color/text_999999" />
+
+
+    <com.simga.library.widget.BGButton
+        android:id="@+id/btn_forget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px30dp"
+        android:text="忘记密码"
+        android:textSize="@dimen/px30sp"
+        app:layout_constraintRight_toRightOf="@id/view2"
+        app:layout_constraintTop_toBottomOf="@id/view2"
+        app:normalTextColor="@color/text_666666"
+        app:pressedTextColor="@color/text_999999" />
+
+    <com.simga.library.widget.BGButton
+        android:id="@+id/btn_login"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/px90dp"
+        android:layout_marginLeft="@dimen/px86dp"
+        android:layout_marginTop="@dimen/px150dp"
+        android:layout_marginRight="@dimen/px86dp"
+        android:gravity="center"
+        android:text="登录"
+        android:textColor="@color/white"
+        android:textSize="@dimen/px36sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_register"
+        app:normalSolid="@color/main_color"
+        app:pressedSolid="@color/pressColor"
+        app:radii="@dimen/px6dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px74dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/btn_login">
+
+        <ImageView
+            android:id="@+id/iv_bind_wechat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/iv_bind_qq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/px210dp" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

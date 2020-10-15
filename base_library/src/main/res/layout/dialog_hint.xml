@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/px540dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_shape_white"
+    android:minHeight="@dimen/px300dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/px30dp"
+        android:paddingRight="@dimen/px30dp">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/text_333333"
+            android:textSize="@dimen/px32dp" />
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px20dp"
+            android:gravity="center"
+            android:textColor="@color/text_666666"
+            android:textSize="@dimen/px28dp" />
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px1dp"
+        android:background="@color/diver_dcdcdc" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px100dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.simga.library.widget.BGButton
+            android:id="@+id/cancel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/cancle"
+            android:textSize="@dimen/px28dp"
+            app:bottomLeftRadius="5dp"
+            app:normalSolid="@color/white"
+            app:normalTextColor="@color/text_666666"
+            app:pressedSolid="@color/pressColor"
+            app:pressedTextColor="@color/white" />
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="@dimen/px1dp"
+            android:layout_height="match_parent"
+            android:background="@color/diver_dcdcdc" />
+
+        <com.simga.library.widget.BGButton
+            android:id="@+id/commit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/comfir"
+            android:textSize="@dimen/px28dp"
+            app:bottomRightRadius="5dp"
+            app:normalSolid="@color/white"
+            app:normalTextColor="@color/main_color"
+            app:pressedSolid="@color/pressColor"
+            app:pressedTextColor="@color/white" />
+    </LinearLayout>
+</LinearLayout>

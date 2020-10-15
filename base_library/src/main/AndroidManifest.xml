@@ -1,0 +1,23 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.simga.library" >
+
+    <application android:supportsRtl="true">
+        <!--适配18：9的全面屏-->
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.1" />
+        <meta-data
+            android:name="APP_ID"
+            android:value="${applicationId}" />
+
+        <!--<provider-->
+            <!--android:name=".utils.MyFileProvider"-->
+            <!--android:authorities="${applicationId}.provider"-->
+            <!--android:exported="false"-->
+            <!--android:grantUriPermissions="true">-->
+            <!--<meta-data-->
+                <!--android:name="android.support.FILE_PROVIDER_PATHS"-->
+                <!--android:resource="@xml/file_provider" />-->
+        <!--</provider>-->
+    </application>
+</manifest>

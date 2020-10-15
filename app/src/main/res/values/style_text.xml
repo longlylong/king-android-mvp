@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 以下为android默认字体 一共六种规格 -->
+    <style name="Text_Sans_Headline">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="Text_Sans_Title">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="Text_Sans_SubTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="Text_Sans_Menu">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="Text_Sans_Body">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="Text_Sans_Small">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <!-- 基于以上6种字号，根据使用场景定义不同的规格，一共6*3种 -->
+
+    <!-- Headline -->
+    <style name="Text_Sans_Headline_Primary" parent="Text_Sans_Headline">
+        <item name="android:textColor">@color/text_color_primary</item>
+    </style>
+
+    <style name="Text_Sans_Headline_Secondary" parent="Text_Sans_Headline">
+        <item name="android:textColor">@color/text_color_secondary</item>
+    </style>
+
+    <style name="Text_Sans_Headline_Disabled" parent="Text_Sans_Headline">
+        <item name="android:textColor">@color/text_color_disabled</item>
+    </style>
+
+    <!-- Title -->
+    <style name="Text_Sans_Title_Primary" parent="Text_Sans_Title">
+        <item name="android:textColor">@color/text_color_primary</item>
+    </style>
+
+    <style name="Text_Sans_Title_Secondary" parent="Text_Sans_Title">
+        <item name="android:textColor">@color/text_color_secondary</item>
+    </style>
+
+    <style name="Text_Sans_Title_Disabled" parent="Text_Sans_Title">
+        <item name="android:textColor">@color/text_color_disabled</item>
+    </style>
+
+    <style name="Text_Sans_Title_Primary_light" parent="Text_Sans_Title">
+        <item name="android:textColor">@color/text_color_primary_light</item>
+    </style>
+
+    <style name="Text_Sans_Title_Secondary_light" parent="Text_Sans_Title">
+        <item name="android:textColor">@color/text_color_secondary_light</item>
+    </style>
+
+    <style name="Text_Sans_Title_Disabled_light" parent="Text_Sans_Title">
+        <item name="android:textColor">@color/text_color_disabled_light</item>
+    </style>
+
+    <!-- Subtitle -->
+    <style name="Text_Sans_SubTitle_Primary" parent="Text_Sans_SubTitle">
+        <item name="android:textColor">@color/text_color_primary</item>
+    </style>
+
+    <style name="Text_Sans_SubTitle_Secondary" parent="Text_Sans_SubTitle">
+        <item name="android:textColor">@color/text_color_secondary</item>
+    </style>
+
+    <style name="Text_Sans_SubTitle_Disabled" parent="Text_Sans_SubTitle">
+        <item name="android:textColor">@color/text_color_disabled</item>
+    </style>
+
+    <style name="Text_Sans_SubTitle_Primary_light" parent="Text_Sans_SubTitle">
+        <item name="android:textColor">@color/text_color_primary_light</item>
+    </style>
+
+    <style name="Text_Sans_SubTitle_Secondary_light" parent="Text_Sans_SubTitle">
+        <item name="android:textColor">@color/text_color_secondary_light</item>
+    </style>
+
+    <style name="Text_Sans_SubTitle_Disabled_light" parent="Text_Sans_SubTitle">
+        <item name="android:textColor">@color/text_color_disabled_light</item>
+    </style>
+
+    <style name="Text_Sans_SubTitle_Primary_blue" parent="Text_Sans_SubTitle">
+        <item name="android:textColor">@color/blue_dark</item>
+    </style>
+
+    <!-- Menu -->
+    <style name="Text_Sans_Menu_Primary" parent="Text_Sans_Menu">
+        <item name="android:textColor">@color/text_color_primary</item>
+    </style>
+
+    <style name="Text_Sans_Menu_Secondary" parent="Text_Sans_Menu">
+        <item name="android:textColor">@color/text_color_secondary</item>
+    </style>
+
+    <style name="Text_Sans_Menu_Secondary_light" parent="Text_Sans_Menu">
+        <item name="android:textColor">@color/text_color_secondary_light</item>
+    </style>
+
+    <style name="Text_Sans_Menu_Disabled" parent="Text_Sans_Menu">
+        <item name="android:textColor">@color/text_color_disabled</item>
+    </style>
+
+    <!-- Body -->
+    <style name="Text_Sans_Body_Primary" parent="Text_Sans_Body">
+        <item name="android:textColor">@color/text_color_primary</item>
+    </style>
+
+    <style name="Text_Sans_Body_Secondary" parent="Text_Sans_Body">
+        <item name="android:textColor">@color/text_color_secondary</item>
+    </style>
+
+    <style name="Text_Sans_Body_Disabled" parent="Text_Sans_Body">
+        <item name="android:textColor">@color/text_color_disabled</item>
+    </style>
+
+    <style name="Text_Sans_Body_Primary_light" parent="Text_Sans_Body">
+        <item name="android:textColor">@color/text_color_primary_light</item>
+    </style>
+
+    <style name="Text_Sans_Body_Secondary_light" parent="Text_Sans_Body">
+        <item name="android:textColor">@color/text_color_secondary_light</item>
+    </style>
+
+    <style name="Text_Sans_Body_Disabled_light" parent="Text_Sans_Body">
+        <item name="android:textColor">@color/text_color_disabled_light</item>
+    </style>
+
+    <!-- small -->
+    <style name="Text_Sans_Small_Primary" parent="Text_Sans_Small">
+        <item name="android:textColor">@color/text_color_primary</item>
+    </style>
+
+    <style name="Text_Sans_Small_Secondary" parent="Text_Sans_Small">
+        <item name="android:textColor">@color/text_color_secondary</item>
+    </style>
+
+    <style name="Text_Sans_Small_Disabled" parent="Text_Sans_Small">
+        <item name="android:textColor">@color/text_color_disabled</item>
+    </style>
+
+    <!-- 华丽的分割线 风格 -->
+    <style name="Dividing_Line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:background">@color/divide_line</item>
+    </style>
+
+    <style name="Dividing_Line_Light">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:background">@color/divide_line_light</item>
+    </style>
+
+</resources>
