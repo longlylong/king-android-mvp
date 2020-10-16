@@ -1,23 +1,25 @@
-package com.kinglyl.library.db;
+package com.kinglyl.library.thread;
 
 import android.os.SystemClock;
+
+import com.kinglyl.library.db.RealmHelper;
 
 import java.util.LinkedList;
 
 /**
  * 背景线程命令队列
  */
-public class CommandQueueRunner implements Runnable {
+public class DBQueueRunner implements Runnable {
     private final LinkedList<Command> mCommands = new LinkedList<>();
 
-    private CommandQueueRunner() {
+    private DBQueueRunner() {
         Thread mThread = new Thread(this);
         mThread.setName("CommandQueueRunner");
         mThread.setDaemon(true);
         mThread.start();
     }
 
-    public static CommandQueueRunner getInstance() {
+    public static DBQueueRunner getInstance() {
         return SingletonHolder.INSTANCE;
     }
 
@@ -58,7 +60,7 @@ public class CommandQueueRunner implements Runnable {
     }
 
     private static class SingletonHolder {
-        public static final CommandQueueRunner INSTANCE = new CommandQueueRunner();
+        public static final DBQueueRunner INSTANCE = new DBQueueRunner();
     }
 
     private static class Command {

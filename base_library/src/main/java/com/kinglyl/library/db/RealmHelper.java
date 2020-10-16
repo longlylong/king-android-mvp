@@ -4,7 +4,7 @@ import android.content.SharedPreferences;
 
 import com.kinglyl.library.account.Account;
 import com.kinglyl.library.account.AccountManager;
-import com.kinglyl.library.base.BaseApp;
+import com.kinglyl.library.activity.BaseApp;
 
 import io.realm.Realm;
 import io.realm.RealmConfiguration;

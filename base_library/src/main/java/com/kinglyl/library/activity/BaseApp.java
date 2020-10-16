@@ -1,4 +1,4 @@
-package com.kinglyl.library.base;
+package com.kinglyl.library.activity;
 
 import android.content.Context;
 import android.content.SharedPreferences;

@@ -13,7 +13,7 @@ import com.kinglyl.android.view.menu.MenuItem;
 import com.kinglyl.android.view.menu.MenuType;
 import com.kinglyl.android.view.menu.OnMenuItemClickListener;
 import com.kinglyl.library.activity.BaseActivity;
-import com.kinglyl.library.base.CreatePresenter;
+import com.kinglyl.library.mvp.CreatePresenter;
 
 import butterknife.BindView;
 

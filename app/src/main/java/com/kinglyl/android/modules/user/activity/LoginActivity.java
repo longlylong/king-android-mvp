@@ -8,7 +8,7 @@ import com.kinglyl.android.modules.user.dto.LoginInfoDto;
 import com.kinglyl.android.modules.user.persenter.UserPresenter;
 import com.kinglyl.android.modules.user.view.UserView;
 import com.kinglyl.library.activity.BaseActivity;
-import com.kinglyl.library.base.CreatePresenter;
+import com.kinglyl.library.mvp.CreatePresenter;
 
 @CreatePresenter(presenter = UserPresenter.class)
 public class LoginActivity extends BaseActivity<UserPresenter> implements UserView {
@@ -48,7 +48,7 @@ public class LoginActivity extends BaseActivity<UserPresenter> implements UserVi
     @Override
     protected void onResume() {
         super.onResume();
-//        getPresenter().userLogin("13413513467", "123456");
+        getPresenter().userLogin("13413513467", "123456");
 
         TestDBStore testDBStore = new TestDBStore();
         testDBStore.save();

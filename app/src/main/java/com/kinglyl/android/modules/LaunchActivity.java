@@ -6,13 +6,12 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 
-import com.facebook.drawee.view.SimpleDraweeView;
 import com.kinglyl.android.R;
 import com.kinglyl.android.modules.main.MainActivity;
 import com.kinglyl.android.modules.user.activity.LoginActivity;
 import com.kinglyl.library.activity.BaseActivity;
 import com.kinglyl.library.activity.BaseImageView;
-import com.kinglyl.library.base.BasePresenter;
+import com.kinglyl.library.mvp.BasePresenter;
 
 import java.util.List;
 

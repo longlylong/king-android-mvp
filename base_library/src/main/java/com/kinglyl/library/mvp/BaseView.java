@@ -1,4 +1,4 @@
-package com.kinglyl.library.base;
+package com.kinglyl.library.mvp;
 
 import com.kinglyl.library.account.Account;
 

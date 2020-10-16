@@ -1,4 +1,4 @@
-package com.kinglyl.library.base;
+package com.kinglyl.library.mvp;
 
 import android.app.Activity;
 import android.app.Application;

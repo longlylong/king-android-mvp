@@ -4,7 +4,7 @@ import android.app.Notification;
 
 import com.lzf.easyfloat.EasyFloat;
 import com.orhanobut.hawk.Hawk;
-import com.kinglyl.library.base.BaseApp;
+import com.kinglyl.library.activity.BaseApp;
 import com.kinglyl.library.utils.HawkKey;
 import com.tencent.bugly.crashreport.CrashReport;
 

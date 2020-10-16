@@ -6,7 +6,7 @@ import com.kinglyl.android.modules.user.api.UserApi;
 import com.kinglyl.android.modules.user.dto.LoginInfoDto;
 import com.kinglyl.android.modules.user.dto.LoginVo;
 import com.kinglyl.android.modules.user.view.UserView;
-import com.kinglyl.library.base.BasePresenter;
+import com.kinglyl.library.mvp.BasePresenter;
 import com.kinglyl.library.http.bean.BaseResult;
 
 import retrofit2.Call;

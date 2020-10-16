@@ -1,4 +1,4 @@
-package com.kinglyl.library.base;
+package com.kinglyl.library.mvp;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
