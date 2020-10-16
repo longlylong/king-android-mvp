@@ -47,7 +47,7 @@ public abstract class BaseFragment<T extends BasePresenter> extends Fragment imp
         mPresenterProviders = PresenterProviders.inject(this);
         mPresenterDispatch = new PresenterDispatch(mPresenterProviders);
 
-        mPresenterDispatch.attachView(getActivity(), this);
+        mPresenterDispatch.attachView(mContext, this);
         mPresenterDispatch.onCreatePresenter(savedInstanceState);
     }
 

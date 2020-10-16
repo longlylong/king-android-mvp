@@ -5,6 +5,8 @@ import android.os.Bundle;
 
 import androidx.annotation.Nullable;
 
+import com.kinglyl.library.activity.BaseActivity;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -15,7 +17,7 @@ public class PresenterDispatch {
         mProviders = providers;
     }
 
-    public <P extends BasePresenter> void attachView(Context context, BaseView view) {
+    public <P extends BasePresenter> void attachView(BaseActivity context, BaseView view) {
         PresenterStore store = mProviders.getPresenterStore();
         HashMap<String, P> mMap = store.getMap();
         for (Map.Entry<String, P> entry : mMap.entrySet()) {

@@ -1,36 +1,45 @@
 package com.kinglyl.library.mvp;
 
-import android.content.Context;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
 
+import com.kinglyl.library.activity.BaseActivity;
 import com.kinglyl.library.http.ErrorUtils;
 import com.kinglyl.library.http.HttpConstant;
 import com.kinglyl.library.http.HttpProtocolFactory;
 import com.kinglyl.library.http.bean.BaseResult;
 import com.kinglyl.library.thread.AsyncExecutor;
 import com.kinglyl.library.thread.MainThreadExecutor;
+import com.kinglyl.library.utils.LogUtil;
+
+import java.util.HashMap;
+import java.util.Map;
 
 import retrofit2.Call;
 import retrofit2.Response;
 
 public abstract class BasePresenter<V extends BaseView> {
 
-    protected Context mContext;
-
+    protected BaseActivity mContext;
     protected V mView;
 
-    void onCleared() {
-    }
+    private Map<String, Call> httpCall = new HashMap<>();
 
-    void attachView(Context context, V view) {
+    void attachView(BaseActivity context, V view) {
         this.mContext = context;
         this.mView = view;
     }
 
     void detachView() {
         this.mView = null;
+        for (String key : httpCall.keySet()) {
+            Call call = httpCall.get(key);
+            if (call != null) {
+                call.cancel();
+            }
+        }
+        httpCall.clear();
     }
 
     public boolean isAttachView() {
@@ -43,6 +52,9 @@ public abstract class BasePresenter<V extends BaseView> {
     void onDestroyPresenter() {
         this.mContext = null;
         detachView();
+    }
+
+    void onCleared() {
     }
 
     void onSaveInstanceState(Bundle outState) {
@@ -62,16 +74,25 @@ public abstract class BasePresenter<V extends BaseView> {
         }
 
         AsyncExecutor.getInstance().execute(() -> {
+            Call<BaseResult<T>> call = listener.getApi();
+            String url = call.request().url().toString();
+
             try {
-                Call<BaseResult<T>> call = listener.getApi();
+                Call oldCall = httpCall.get(url);
+                if (oldCall != null) {
+                    oldCall.cancel();
+                }
+                httpCall.put(url, call);
+
                 Response<BaseResult<T>> execute = call.execute();
                 BaseResult<T> body = execute.body();
+
+                httpCall.remove(url);
 
                 MainThreadExecutor.getInstance().execute(() -> {
                     if (body != null) {
                         if (body.ok()) {
                             listener.onHttpSuccess(body.data);
-
                         } else {
                             listener.onHttpError(body.code, body.message);
                             if (mView != null) {
@@ -88,6 +109,11 @@ public abstract class BasePresenter<V extends BaseView> {
                 });
 
             } catch (Exception e) {
+                httpCall.remove(url);
+                if ("Socket closed".equals(e.getMessage())) {
+                    LogUtil.e("已取消请求:" + url);
+                    return;
+                }
                 if (mView != null) {
                     MainThreadExecutor.getInstance().execute(() -> {
                         mView.onHttpError(-1, ErrorUtils.getErrorMsg());
