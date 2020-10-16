@@ -12,6 +12,7 @@ import com.kinglyl.android.modules.user.activity.LoginActivity;
 import com.kinglyl.library.activity.BaseActivity;
 import com.kinglyl.library.activity.BaseImageView;
 import com.kinglyl.library.mvp.BasePresenter;
+import com.kinglyl.library.utils.ActionUtil;
 
 import java.util.List;
 
@@ -54,6 +55,9 @@ public class LaunchActivity extends BaseActivity<BasePresenter> implements EasyP
     }
 
     private void gotoNext() {
+        if (ActionUtil.isFastDoubleClick()) {
+            return;
+        }
         postDelayed(() -> {
             if (isLogin()) {
                 MainActivity.open(mContext);

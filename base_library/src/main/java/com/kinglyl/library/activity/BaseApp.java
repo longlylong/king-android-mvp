@@ -14,7 +14,6 @@ import com.facebook.imagepipeline.backends.okhttp3.OkHttpImagePipelineConfigFact
 import com.facebook.imagepipeline.cache.MemoryCacheParams;
 import com.facebook.imagepipeline.core.ImagePipelineConfig;
 import com.jeremyliao.liveeventbus.LiveEventBus;
-import com.kinglyl.library.utils.SdCardUtil;
 import com.kinglyl.library.utils.glide.GlideUtil;
 import com.orhanobut.hawk.Hawk;
 import com.zzhoujay.richtext.RichText;
@@ -40,8 +39,6 @@ public class BaseApp extends MultiDexApplication {
         super.onCreate();
         app = this;
         Utils.init(this);
-        //初始化项目文件夹
-        SdCardUtil.initFileDir(this);
         //图片框架初始化
         GlideUtil.init(this);
         //初始化hawk
