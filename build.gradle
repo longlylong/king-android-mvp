@@ -32,7 +32,7 @@ task clean(type: Delete) {
 
 //应用版本和信息配置
 ext {
-    applicationId = "com.king.android"
+    applicationId = "com.kinglyl.android"
     buildToolsVersion = "28.0.3"
     minSdkVersion = 21
     targetSdkVersion = 28

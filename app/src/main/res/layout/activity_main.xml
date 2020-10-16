@@ -30,7 +30,7 @@
             android:layout_height="fill_parent" />
     </ViewFlipper>
 
-    <com.king.android.view.MainFootView
+    <com.kinglyl.android.view.MainFootView
         android:id="@+id/main_foot"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" />

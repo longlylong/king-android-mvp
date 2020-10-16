@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.king.android">
+    package="com.kinglyl.android">
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission
@@ -79,7 +79,7 @@
         android:value="portrait|landscape" />
 
     <application
-        android:name="com.king.android.App"
+        android:name="com.kinglyl.android.App"
         android:allowBackup="true"
         android:appComponentFactory="n"
         android:icon="@mipmap/ic_launcher"
@@ -99,9 +99,9 @@
             android:name="org.apache.http.legacy"
             android:required="false" />
 
-        <activity android:name="com.king.android.modules.main.MainActivity" />
+        <activity android:name="com.kinglyl.android.modules.main.MainActivity" />
 
-        <activity android:name="com.king.android.modules.user.activity.LoginActivity" />
+        <activity android:name="com.kinglyl.android.modules.user.activity.LoginActivity" />
 
         <activity android:name=".modules.LaunchActivity">
             <intent-filter>
@@ -288,7 +288,7 @@
         <!-- 可配置android:process参数将PushService放在其他进程中 -->
         <!--User defined.  For test only 继承自cn.jpush.android.service.JCommonService-->
         <service
-            android:name="com.king.android.receiver.jpush.PushService"
+            android:name="com.kinglyl.android.receiver.jpush.PushService"
             android:process=":pushcore">
             <intent-filter>
                 <action android:name="cn.jiguang.user.service.action" />
