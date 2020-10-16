@@ -1,5 +1,7 @@
 package com.kinglyl.android.db;
 
+import com.kinglyl.library.db.RealmHelper;
+
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
 

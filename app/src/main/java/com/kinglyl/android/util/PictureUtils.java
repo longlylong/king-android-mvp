@@ -5,14 +5,8 @@ import com.luck.picture.lib.PictureSelector;
 import com.luck.picture.lib.config.PictureConfig;
 import com.luck.picture.lib.config.PictureMimeType;
 import com.luck.picture.lib.tools.PictureFileUtils;
-import com.simga.library.activity.BaseActivity;
+import com.kinglyl.library.activity.BaseActivity;
 
-/**
- * PackageName : cn.ewhale.xinnongtong.utils
- * Author : SimGa Liu
- * Date : 2017/11/02
- * Time : 17:47
- */
 public class PictureUtils {
 
     public static void openCompress(int chooseType, BaseActivity activity, int requestCode) {

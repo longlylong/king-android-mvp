@@ -5,7 +5,7 @@
     android:background="@color/bg_gray"
     android:orientation="vertical">
 
-    <com.simga.library.activity.BaseRecyclerView
+    <com.kinglyl.library.activity.BaseRecyclerView
         android:id="@+id/fragment_c_recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

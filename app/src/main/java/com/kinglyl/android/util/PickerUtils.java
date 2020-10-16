@@ -5,7 +5,7 @@ import android.content.Context;
 import com.alibaba.fastjson.JSON;
 import com.blankj.utilcode.util.LogUtils;
 import com.kinglyl.android.R;
-import com.simga.library.activity.BaseActivity;
+import com.kinglyl.library.activity.BaseActivity;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -24,11 +24,6 @@ import cn.qqtheme.framework.util.ConvertUtils;
 import cn.qqtheme.framework.util.DateUtils;
 import cn.qqtheme.framework.widget.WheelView;
 
-/**
- * Author：SimGa
- * CoryRight：2018/11/16
- * PackageName：com.ewhale.imissyou.userside.utils
- */
 public class PickerUtils {
 
     private static final PickerUtils ourInstance = new PickerUtils();
@@ -65,7 +60,7 @@ public class PickerUtils {
                     mContext.getResources().getColor(R.color.text_999999));
             peiSongPicker.setTitleTextColor(mContext.getResources().getColor(R.color.text_999999));
             peiSongPicker.setTopLineColor(mContext.getResources().getColor(R.color.diver_dcdcdc));
-            peiSongPicker.setAnimationStyle(com.simga.library.R.style.bottom_int_out_dialog_style);
+            peiSongPicker.setAnimationStyle(com.kinglyl.library.R.style.bottom_int_out_dialog_style);
             peiSongPicker.setOnOptionPickListener(new OptionPicker.OnOptionPickListener() {
                 @Override
                 public void onOptionPicked(int index, String item) {
@@ -127,7 +122,7 @@ public class PickerUtils {
         datePicker.setLabelTextColor(mContext.getResources().getColor(R.color.main_color));
         datePicker.setTitleTextColor(mContext.getResources().getColor(R.color.text_999999));
         datePicker.setTopLineColor(mContext.getResources().getColor(R.color.diver_dcdcdc));
-        datePicker.setAnimationStyle(com.simga.library.R.style.bottom_int_out_dialog_style);
+        datePicker.setAnimationStyle(com.kinglyl.library.R.style.bottom_int_out_dialog_style);
         datePicker.setRangeStart(startYear, startMonth, startDay);
         datePicker.setSelectedItem(endYear, endMonth, endDay);
         datePicker.setRangeEnd(endYear, endMonth, endDay);
@@ -165,7 +160,7 @@ public class PickerUtils {
         datePicker.setLabelTextColor(mContext.getResources().getColor(R.color.main_color));
         datePicker.setTitleTextColor(mContext.getResources().getColor(R.color.text_999999));
         datePicker.setTopLineColor(mContext.getResources().getColor(R.color.diver_dcdcdc));
-        datePicker.setAnimationStyle(com.simga.library.R.style.bottom_int_out_dialog_style);
+        datePicker.setAnimationStyle(com.kinglyl.library.R.style.bottom_int_out_dialog_style);
         datePicker.setRangeStart(1970, 12);
         datePicker.setSelectedItem(1990, 1);
         datePicker.setRangeEnd(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH) + 1);
@@ -269,7 +264,7 @@ public class PickerUtils {
         picker.setLabelTextColor(mContext.getResources().getColor(R.color.main_color));
         picker.setTitleTextColor(mContext.getResources().getColor(R.color.text_999999));
         picker.setTopLineColor(mContext.getResources().getColor(R.color.diver_dcdcdc));
-        picker.setAnimationStyle(com.simga.library.R.style.bottom_int_out_dialog_style);
+        picker.setAnimationStyle(com.kinglyl.library.R.style.bottom_int_out_dialog_style);
         picker.setOnStringPickListener(new LinkagePicker.OnStringPickListener() {
             @Override
             public void onPicked(String first, String second, String third) {
@@ -303,7 +298,7 @@ public class PickerUtils {
                     mContext.getResources().getColor(R.color.text_999999));
             addressPicker.setTitleTextColor(mContext.getResources().getColor(R.color.text_999999));
             addressPicker.setTopLineColor(mContext.getResources().getColor(R.color.diver_dcdcdc));
-            addressPicker.setAnimationStyle(com.simga.library.R.style.bottom_int_out_dialog_style);
+            addressPicker.setAnimationStyle(com.kinglyl.library.R.style.bottom_int_out_dialog_style);
             addressPicker.setOnAddressPickListener(new AddressPicker.OnAddressPickListener() {
                 @Override
                 public void onAddressPicked(Province province, City city, County county) {

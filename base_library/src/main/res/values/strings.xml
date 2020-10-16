@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SimGaLibrary</string>
+    <string name="app_name">KinglylLibrary</string>
     <string name="http_exception_network">网络不可用，请检查网络</string>
     <string name="http_exception_url">Url格式错误啦</string>
     <string name="http_exception_host">没有找到Url指定的服务器</string>

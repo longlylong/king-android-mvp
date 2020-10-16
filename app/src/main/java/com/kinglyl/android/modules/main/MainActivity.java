@@ -12,8 +12,8 @@ import com.kinglyl.android.view.MainFootView;
 import com.kinglyl.android.view.menu.MenuItem;
 import com.kinglyl.android.view.menu.MenuType;
 import com.kinglyl.android.view.menu.OnMenuItemClickListener;
-import com.simga.library.activity.BaseActivity;
-import com.simga.library.base.CreatePresenter;
+import com.kinglyl.library.activity.BaseActivity;
+import com.kinglyl.library.base.CreatePresenter;
 
 import butterknife.BindView;
 

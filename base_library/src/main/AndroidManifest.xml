@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.simga.library" >
+    package="com.kinglyl.library" >
 
     <application android:supportsRtl="true">
         <!--适配18：9的全面屏-->

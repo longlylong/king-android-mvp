@@ -43,7 +43,7 @@
             android:src="@drawable/back_black_icon"
             android:visibility="gone" />
 
-        <com.simga.library.widget.BGButton
+        <com.kinglyl.library.widget.BGButton
             android:id="@+id/tv_right"
             android:layout_width="wrap_content"
             android:layout_height="28dp"

@@ -1,13 +1,13 @@
 package com.kinglyl.android.modules.user.persenter;
 
-import com.kinglyl.android.account.Account;
-import com.kinglyl.android.account.AccountManager;
+import com.kinglyl.library.account.Account;
+import com.kinglyl.library.account.AccountManager;
 import com.kinglyl.android.modules.user.api.UserApi;
 import com.kinglyl.android.modules.user.dto.LoginInfoDto;
 import com.kinglyl.android.modules.user.dto.LoginVo;
 import com.kinglyl.android.modules.user.view.UserView;
-import com.simga.library.base.BasePresenter;
-import com.simga.library.http.bean.BaseResult;
+import com.kinglyl.library.base.BasePresenter;
+import com.kinglyl.library.http.bean.BaseResult;
 
 import retrofit2.Call;
 

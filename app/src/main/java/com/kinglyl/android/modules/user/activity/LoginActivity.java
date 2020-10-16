@@ -6,8 +6,8 @@ import com.kinglyl.android.R;
 import com.kinglyl.android.modules.user.dto.LoginInfoDto;
 import com.kinglyl.android.modules.user.persenter.UserPresenter;
 import com.kinglyl.android.modules.user.view.UserView;
-import com.simga.library.activity.BaseActivity;
-import com.simga.library.base.CreatePresenter;
+import com.kinglyl.library.activity.BaseActivity;
+import com.kinglyl.library.base.CreatePresenter;
 
 @CreatePresenter(presenter = UserPresenter.class)
 public class LoginActivity extends BaseActivity<UserPresenter> implements UserView {

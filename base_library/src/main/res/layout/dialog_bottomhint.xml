@@ -13,7 +13,7 @@
         android:background="@drawable/dialog_shape_white"
         android:orientation="vertical">
 
-        <com.simga.library.widget.BGButton
+        <com.kinglyl.library.widget.BGButton
             android:id="@+id/buttonOne"
             android:layout_width="match_parent"
             android:layout_height="@dimen/px90dp"
@@ -31,7 +31,7 @@
             android:layout_height="@dimen/px1dp"
             android:background="@color/diver_dcdcdc" />
 
-        <com.simga.library.widget.BGButton
+        <com.kinglyl.library.widget.BGButton
             android:id="@+id/buttonTwo"
             android:layout_width="match_parent"
             android:layout_height="@dimen/px90dp"
@@ -50,7 +50,7 @@
         android:layout_height="@dimen/px20dp"
         android:background="@color/transparent" />
 
-    <com.simga.library.widget.BGButton
+    <com.kinglyl.library.widget.BGButton
         android:id="@+id/buttonThree"
         app:radii="@dimen/px6dp"
         android:layout_width="match_parent"

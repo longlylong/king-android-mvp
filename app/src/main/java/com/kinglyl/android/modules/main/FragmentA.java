@@ -3,7 +3,7 @@ package com.kinglyl.android.modules.main;
 import android.os.Bundle;
 
 import com.kinglyl.android.R;
-import com.simga.library.activity.BaseFragment;
+import com.kinglyl.library.activity.BaseFragment;
 
 public class FragmentA extends BaseFragment {
 

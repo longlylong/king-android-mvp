@@ -31,7 +31,7 @@ import com.luck.picture.lib.tools.DateUtils;
 import com.luck.picture.lib.tools.PictureFileUtils;
 import com.luck.picture.lib.tools.SdkVersionUtils;
 import com.luck.picture.lib.tools.StringUtils;
-import com.simga.library.utils.ToastManager;
+import com.kinglyl.library.utils.ToastManager;
 import com.luck.picture.lib.tools.VoiceUtils;
 
 import java.io.File;

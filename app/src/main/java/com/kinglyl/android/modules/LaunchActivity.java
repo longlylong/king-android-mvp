@@ -7,11 +7,10 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 
 import com.kinglyl.android.R;
-import com.kinglyl.android.account.AccountManager;
 import com.kinglyl.android.modules.main.MainActivity;
 import com.kinglyl.android.modules.user.activity.LoginActivity;
-import com.simga.library.activity.BaseActivity;
-import com.simga.library.base.BasePresenter;
+import com.kinglyl.library.activity.BaseActivity;
+import com.kinglyl.library.base.BasePresenter;
 
 import java.util.List;
 
@@ -50,7 +49,7 @@ public class LaunchActivity extends BaseActivity<BasePresenter> implements EasyP
 
     private void gotoNext() {
         postDelayed(() -> {
-            if (AccountManager.getInstance().getAccount().isLogin()) {
+            if (isLogin()) {
                 MainActivity.open(mContext);
             } else {
                 LoginActivity.open(mContext);

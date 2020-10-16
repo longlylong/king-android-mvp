@@ -1,7 +1,7 @@
 package com.kinglyl.android.modules.user.view;
 
 import com.kinglyl.android.modules.user.dto.LoginInfoDto;
-import com.simga.library.base.BaseView;
+import com.kinglyl.library.base.BaseView;
 
 public interface UserView extends BaseView {
 
