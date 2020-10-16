@@ -24,17 +24,20 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-    compileSdkVersion 28
-    buildToolsVersion '28.0.3'
+    compileSdkVersion rootProject.ext.targetSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
     aaptOptions.cruncherEnabled = false
     aaptOptions.useNewCruncher = false
     defaultConfig {
-        applicationId "com.king.android"
-        minSdkVersion 21
-        targetSdkVersion 28
-        versionCode 20200921
-        versionName "0.0.1"
+        applicationId rootProject.ext.applicationId
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+
         multiDexEnabled true
+
         ndk { abiFilters 'armeabi', 'armeabi-v7a', 'armeabi-v8a', 'x86' }
         manifestPlaceholders = [
                 //极光推送
@@ -44,7 +47,7 @@ android {
 
                 //BUGLY
                 BUGLY_APPID       : "aaaa",
-                BUGLY_APP_VERSION : 1,
+                BUGLY_APP_VERSION : versionName,
                 BUGLY_APP_CHANNEL : "king",
                 BUGLY_ENABLE_DEBUG: false
         ]

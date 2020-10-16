@@ -29,3 +29,13 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+//应用版本和信息配置
+ext {
+    applicationId = "com.king.android"
+    buildToolsVersion = "28.0.3"
+    minSdkVersion = 21
+    targetSdkVersion = 28
+    versionCode = 20190920
+    versionName = "0.0.1"
+}
