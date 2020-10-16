@@ -1,5 +1,9 @@
 package com.kinglyl.library.http;
 
+import com.kinglyl.library.account.Account;
+import com.kinglyl.library.account.AccountManager;
+import com.kinglyl.library.utils.LogUtil;
+
 import java.io.IOException;
 import java.net.InetAddress;
 import java.net.Socket;
@@ -64,10 +68,15 @@ public class HttpProtocolFactory {
 
         @Override
         public Response intercept(Chain chain) throws IOException {
+            Account account = AccountManager.getInstance().getAccount();
             Request oldRequest = chain.request();
+
+            LogUtil.e("请求链接:");
+            LogUtil.e(oldRequest.url().toString());
+
             // 新的请求
             Request newRequest = oldRequest.newBuilder().
-                    addHeader("token", "287f4ab3cfe7c36f915057303117e6e6").
+                    addHeader("token", account.getToken()).
                     addHeader("User-Agent", "Client-Android").
                     addHeader("Content-Type", "application/json")
                     .build();
@@ -80,7 +89,7 @@ public class HttpProtocolFactory {
 
         private SSLSocketFactory delegate;
 
-        public TLSSocketFactory() throws KeyManagementException, NoSuchAlgorithmException {
+        TLSSocketFactory() throws KeyManagementException, NoSuchAlgorithmException {
             SSLContext context = SSLContext.getInstance("TLS");
             context.init(null, null, null);
             delegate = context.getSocketFactory();

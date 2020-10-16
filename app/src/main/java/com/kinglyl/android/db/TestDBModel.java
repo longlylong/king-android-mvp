@@ -4,14 +4,17 @@ import com.kinglyl.library.db.RealmHelper;
 
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
+import lombok.Data;
 
 /**
  * 测试模型
  * Created by King on 2015/8/20 0020.
  */
 
+@Data
 public class TestDBModel extends RealmObject {
 
+    //自增id 不需要额外设置 构造方法需要调设置id的
     @PrimaryKey
     private int id;
     private String name;
@@ -20,19 +23,4 @@ public class TestDBModel extends RealmObject {
         setId(RealmHelper.autoAdd(TestDBModel.class));
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 }

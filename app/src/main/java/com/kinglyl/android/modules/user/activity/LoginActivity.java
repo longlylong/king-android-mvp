@@ -3,6 +3,7 @@ package com.kinglyl.android.modules.user.activity;
 import android.os.Bundle;
 
 import com.kinglyl.android.R;
+import com.kinglyl.android.db.TestDBStore;
 import com.kinglyl.android.modules.user.dto.LoginInfoDto;
 import com.kinglyl.android.modules.user.persenter.UserPresenter;
 import com.kinglyl.android.modules.user.view.UserView;
@@ -47,6 +48,9 @@ public class LoginActivity extends BaseActivity<UserPresenter> implements UserVi
     @Override
     protected void onResume() {
         super.onResume();
-        getPresenter().userLogin("13413513467", "123456");
+//        getPresenter().userLogin("13413513467", "123456");
+
+        TestDBStore testDBStore = new TestDBStore();
+        testDBStore.save();
     }
 }

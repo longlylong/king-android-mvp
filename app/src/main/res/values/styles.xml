@@ -57,4 +57,9 @@
         <item name="android:layout_height">wrap_content</item>
     </style>
 
+    <style name="Wallpaper" parent="Theme.AppCompat.Light.NoActionBar" >
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowShowWallpaper">true</item>
+    </style>
 </resources>

@@ -103,7 +103,8 @@
 
         <activity android:name="com.kinglyl.android.modules.user.activity.LoginActivity" />
 
-        <activity android:name=".modules.LaunchActivity">
+        <activity android:name=".modules.LaunchActivity"
+             android:theme="@style/Wallpaper">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

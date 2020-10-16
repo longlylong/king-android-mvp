@@ -6,14 +6,17 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 
+import com.facebook.drawee.view.SimpleDraweeView;
 import com.kinglyl.android.R;
 import com.kinglyl.android.modules.main.MainActivity;
 import com.kinglyl.android.modules.user.activity.LoginActivity;
 import com.kinglyl.library.activity.BaseActivity;
+import com.kinglyl.library.activity.BaseImageView;
 import com.kinglyl.library.base.BasePresenter;
 
 import java.util.List;
 
+import butterknife.BindView;
 import pub.devrel.easypermissions.AfterPermissionGranted;
 import pub.devrel.easypermissions.EasyPermissions;
 
@@ -21,6 +24,8 @@ public class LaunchActivity extends BaseActivity<BasePresenter> implements EasyP
 
     private static final int REQUEST_CODE_PERMISSION = 10002;
 
+    @BindView(R.id.launch_image)
+    BaseImageView baseImageView;
 
     @Override
     protected int getViewId() {
@@ -35,6 +40,8 @@ public class LaunchActivity extends BaseActivity<BasePresenter> implements EasyP
     @Override
     public void initUI(Bundle savedInstanceState) {
         requestPermissionsMain();
+
+        baseImageView.display("https://gw.alipayobjects.com/zos/rmsportal/BiazfanxmamNRoxxVxka.png");
     }
 
     @Override

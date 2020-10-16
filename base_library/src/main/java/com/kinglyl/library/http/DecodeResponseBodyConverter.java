@@ -20,8 +20,11 @@ public class DecodeResponseBodyConverter<T> implements Converter<ResponseBody, T
     @Override
     public T convert(ResponseBody value) throws IOException {
         String response = value.string();
+
         LogUtil.e("返回结果:");
         LogUtil.e(response);
+        LogUtil.e(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+
         if (response.contains(errorStr)) {
             response = response.replace(errorStr, normalStr);
         }

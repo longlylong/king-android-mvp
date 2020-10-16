@@ -22,6 +22,7 @@ import com.zzhoujay.richtext.RichText;
 import java.io.File;
 import java.io.IOException;
 
+import io.realm.Realm;
 import okhttp3.OkHttpClient;
 
 public class BaseApp extends MultiDexApplication {
@@ -49,6 +50,7 @@ public class BaseApp extends MultiDexApplication {
         initLiveEventBus();
         initFresco();
         initSvgaHttpCache();
+        Realm.init(this);
     }
 
 
