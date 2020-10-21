@@ -3,7 +3,8 @@ app
 --DB : realm  
 --lombok  
 --butterknife  
---bugly
+--bugly  
+--fresco 图片加载
 
 base_library 工具库  
 --account 登录信息存放  

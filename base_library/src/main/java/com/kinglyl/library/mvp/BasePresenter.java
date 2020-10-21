@@ -68,7 +68,7 @@ public abstract class BasePresenter<V extends BaseView> {
         postJson(mView, listener);
     }
 
-    protected <T> void postJson(BaseView mView, HttpListener<T> listener) {
+    private <T> void postJson(BaseView mView, HttpListener<T> listener) {
         if (mView != null) {
             MainThreadExecutor.getInstance().execute(mView::showLoading);
         }
